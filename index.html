@@ -8,12 +8,16 @@
 
     <style>
       .ligther {
-        background: rgb(228, 194, 221);
+        background: #fde68e;
       }
 
       .link-color {
         background-color: blueviolet;
         text-decoration: none;
+      }
+
+      img {
+        display: none;
       }
     </style>
   </head>
@@ -25,9 +29,9 @@
 
     <main>
       <div id="table-container">
-        <table style="border: 1px solid blue">
-          <thead style="background-color: aquamarine">
-            <tr>
+        <table>
+          <thead style="background-color: #ffb02e">
+            <tr onmouseover="mostraImmagini()">
               <th>Positive Potato</th>
               <th>Vaso per piante Ice Cream</th>
               <th>Cat IQ Test</th>
@@ -35,13 +39,14 @@
               <th>Bradipo Fioriera</th>
             </tr>
           </thead>
-          <tbody style="border-top: 1px solid lightskyblue">
+          <tbody>
             <tr>
               <td>
                 <img
                   src="images/positive-potato.png"
                   alt="Plushie-image"
                   width="300px"
+                  class="no-img-display"
                 />
                 <ul>
                   <li>Giocattolino con un profondo messaggio</li>
@@ -66,6 +71,7 @@
                   src="images/ice-cream-pot.png"
                   alt="ice-cream-pot-img"
                   width="300px"
+                  class="no-img-display"
                 />
                 <ul>
                   <li>
@@ -90,6 +96,7 @@
                   src="images/cat-iq-test.png"
                   alt="iq-test-cat-game-img"
                   width="300px"
+                  class="no-img-display"
                 />
                 <ul>
                   <li>
@@ -117,6 +124,7 @@
                   src="images/alpaca-img.png"
                   alt="alpaca-plushie-img"
                   width="350px"
+                  class="no-img-display"
                 />
                 <ul>
                   <li>Fatti a mano, qunidi tutti unici!</li>
@@ -140,6 +148,7 @@
                   src="images/fioriera-bradipo.png"
                   alt="sloth-pot-img"
                   width="300px"
+                  class="no-img-display"
                 />
                 <ul>
                   <li>Adatto a tutti i germogli!</li>

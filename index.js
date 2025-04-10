@@ -44,4 +44,9 @@ function cambiaColoreLink() {
 
 // ESERCIZIO 11: Scrivi una funzione per aggiungere/togliere una classe CSS a tutte le immagini della tabella; questa classe deve modificare la visibilità/invisibilità dell'immagine
 
+function mostraImmagini() {
+  let pictures = document.querySelector("img");
+  pictures.classList.remove("no-img-display");
+}
+
 // ESERCIZIO 12: Scrivi una funzione per cambiare il colore del prezzo di ogni prodotto in uno differente, ogni volta che viene invocata
