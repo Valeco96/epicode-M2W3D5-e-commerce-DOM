@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E-commerce DOM excercise</title>
+    <script src="index.js"></script>
+
+    <style>
+      .ligther {
+        background: rgb(228, 194, 221);
+      }
+
+      .link-color {
+        background-color: blueviolet;
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <button onclick="cambiaTema(), cambiaColoreLink()">Cambia tema</button>
+      <h1 onmouseover="cambiaTitolo()">🎁 It's a present! 🎁</h1>
+    </header>
+
+    <main>
+      <div id="table-container">
+        <table style="border: 1px solid blue">
+          <thead style="background-color: aquamarine">
+            <tr>
+              <th>Positive Potato</th>
+              <th>Vaso per piante Ice Cream</th>
+              <th>Cat IQ Test</th>
+              <th>Alpaca Plushie</th>
+              <th>Bradipo Fioriera</th>
+            </tr>
+          </thead>
+          <tbody style="border-top: 1px solid lightskyblue">
+            <tr>
+              <td>
+                <img
+                  src="images/positive-potato.png"
+                  alt="Plushie-image"
+                  width="300px"
+                />
+                <ul>
+                  <li>Giocattolino con un profondo messaggio</li>
+                  <li>Perfetto per diffondere un po' di felicita'</li>
+                </ul>
+                <p>
+                  Qusto simpatico peluche puo' essere piccolo, ma e' pieno di
+                  energia positiva! Con il suo messaggio incoraggiante e' il
+                  regalo perfetto per diffondere un po' di felicita'.
+                </p>
+                <p>5,95EUR</p>
+                <a
+                  href="https://itsapresent.nl/collections/top-20/products/postive-potato-brown"
+                  target="_blank"
+                  class="link"
+                  onmouseover="cambiaColoreLink()"
+                  >Per info e positivitá clicca qui!</a
+                >
+              </td>
+              <td>
+                <img
+                  src="images/ice-cream-pot.png"
+                  alt="ice-cream-pot-img"
+                  width="300px"
+                />
+                <ul>
+                  <li>
+                    Un delizioso vaso per piante a forma di vaschetta gelato
+                  </li>
+                  <li>Porta una dolce atmosfera nella vosta stanzetta</li>
+                </ul>
+                <p>
+                  Perfetto per la vostra pianta preferita o come simpatica
+                  decorazione. Aggiungete un po' di fascino ai vostri interni!
+                </p>
+                <p>8,95EUR</p>
+                <a
+                  href="https://itsapresent.nl/collections/plantenpotten/products/planter-ice-cream-green-orange"
+                  target="_blank"
+                  class="link"
+                  >~Per dolci info, clicca qui~</a
+                >
+              </td>
+              <td>
+                <img
+                  src="images/cat-iq-test.png"
+                  alt="iq-test-cat-game-img"
+                  width="300px"
+                />
+                <ul>
+                  <li>
+                    100 domande, test e curiosita'per scoprire l'IQ del vostro
+                    gatto!
+                  </li>
+                  <li>Regalo originale per tutti i cat parents li' fuori</li>
+                </ul>
+                <p>
+                  Questo originale pacchetto di carte per gli amanti dei gatti
+                  e' composto da 100 carte con domande divertenti, testi
+                  intelligenti e fatti bizzarri. Perfetto per saperne di piu'
+                  sul tuo amico felino.
+                </p>
+                <p>11.95EUR</p>
+                <a
+                  href="https://itsapresent.nl/collections/spellen/products/spel-cat-iq-test-gift-republic"
+                  target="_blank"
+                  class="link"
+                  >Per maggiori info sul test dell'IQ, clicca qui!</a
+                >
+              </td>
+              <td>
+                <img
+                  src="images/alpaca-img.png"
+                  alt="alpaca-plushie-img"
+                  width="350px"
+                />
+                <ul>
+                  <li>Fatti a mano, qunidi tutti unici!</li>
+                  <li>Super carino, super morbido, super resistente~</li>
+                </ul>
+                <p>
+                  I peluche di Alpaca sono stati disegnati sulle montagne del
+                  Peru' e sono fatti a mano, con 100% di vera lana di alpaca.
+                  Estremamente morbidi ed ipoallergenici!
+                </p>
+                <p>39,99EUR</p>
+                <a
+                  href="https://itsapresent.nl/collections/cadeaus-onder-de-30/products/knuffel-baby-alpaca-inkari"
+                  target="_blank"
+                  class="link"
+                  >~Per fluffy info, clicca qui~</a
+                >
+              </td>
+              <td>
+                <img
+                  src="images/fioriera-bradipo.png"
+                  alt="sloth-pot-img"
+                  width="300px"
+                />
+                <ul>
+                  <li>Adatto a tutti i germogli!</li>
+                  <li>Coltivare, tagliare, mangiare, ripetere!</li>
+                </ul>
+                <p>
+                  Ricopri il bradipo di semi secondo le istruzioni, innaffialo,
+                  e metilo alla luce del sole. Osserva la sua pelliccia crescere
+                  "lentamente". Carino e funzionale, win win!
+                </p>
+                <p>23,95EUR</p>
+                <a
+                  href="https://itsapresent.nl/collections/cadeaus-onder-de-30/products/growing-planter-luiaard-gift-republic"
+                  target="_blank"
+                  class="link"
+                  >Per regali creativi, clicca qui!</a
+                >
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </main>
+
+    <footer>
+      <div id="form-container">
+        <h3>Dicci cosa ne pensi!</h3>
+        <form>
+          <input type="text" placeholder="Il tuo commento qui.." />
+          <input type="submit" value="Invia" />
+        </form>
+      </div>
+      <div id="footer-element">
+        <p>
+          Vieni a visitare
+          <a href="https://itsapresent.nl/" target="_blank">It's a Present!</a>
+          all'indirizzo
+          <span onmouseover="cambiaIndirizzo()" id="indirizzo"
+            >Lijnmarkt 16, 3511 KH Utrecht</span
+          >~
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
