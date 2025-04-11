@@ -58,7 +58,9 @@
   <body>
     <header>
       <button onclick="cambiaTema()" id="top-btn">Cambia tema</button>
-      <h1 onmouseover="cambiaTitolo()">🎁 It's a present! 🎁</h1>
+      <h1 onmouseover="cambiaTitolo()" onmouseout="cambiaTitolo2()">
+        🎁 It's a present! 🎁
+      </h1>
     </header>
 
     <main>
@@ -67,26 +69,34 @@
           <thead>
             <tr>
               <th>
-                <a href="#" onclick="mostraImmagini()">Positive Potato</a>
+                <a href="#" onclick="mostraImmagini(0)">Positive Potato</a>
               </th>
               <th>
-                <a href="#" onclick="mostraImmagini()"
+                <a href="#" onclick="mostraImmagini(1)"
                   >Vaso per piante Ice Cream</a
                 >
               </th>
-              <th><a href="#" onclick="mostraImmagini()">Cat IQ Test</a></th>
               <th>
-                <a href="#" onclick="mostraImmagini()">Alpaca Plushie</a>
+                <a href="#" onclick="mostraImmagini(2)" id="nome_2"
+                  >Cat IQ Test</a
+                >
               </th>
               <th>
-                <a href="#" onclick="mostraImmagini()">Bradipo Fioriera</a>
+                <a href="#" onclick="mostraImmagini(3)" id="nome_3"
+                  >Alpaca Plushie</a
+                >
+              </th>
+              <th>
+                <a href="#" onclick="mostraImmagini(4)" id="nome_4"
+                  >Bradipo Fioriera</a
+                >
               </th>
             </tr>
           </thead>
           <tbody>
             <tr>
               <td>
-                <div class="image-container no-img-display">
+                <div class="image-container no-img-display" id="nome_0">
                   <img src="images/positive-potato.png" alt="Plushie-image" />
                 </div>
 
@@ -99,7 +109,7 @@
                   energia positiva! Con il suo messaggio incoraggiante e' il
                   regalo perfetto per diffondere un po' di felicita'.
                 </p>
-                <p>5,95€</p>
+                <p id="prezzo_0">5,95€</p>
                 <a
                   href="https://itsapresent.nl/collections/top-20/products/postive-potato-brown"
                   target="_blank"
@@ -108,7 +118,7 @@
                 >
               </td>
               <td>
-                <div class="image-container no-img-display">
+                <div class="image-container no-img-display" id="nome_1">
                   <img src="images/ice-cream-pot.png" alt="ice-cream-pot-img" />
                 </div>
 
@@ -122,7 +132,7 @@
                   Perfetto per la vostra pianta preferita o come simpatica
                   decorazione. Aggiungete un po' di fascino ai vostri interni!
                 </p>
-                <p>8,95€</p>
+                <p id="prezzo_1">8,95€</p>
                 <a
                   href="https://itsapresent.nl/collections/plantenpotten/products/planter-ice-cream-green-orange"
                   target="_blank"
@@ -131,7 +141,7 @@
                 >
               </td>
               <td>
-                <div class="image-container no-img-display">
+                <div class="image-container no-img-display" id="nome_2">
                   <img
                     src="images/cat-iq-test.png"
                     alt="iq-test-cat-game-img"
@@ -151,7 +161,7 @@
                   intelligenti e fatti bizzarri. Perfetto per saperne di piu'
                   sul tuo amico felino.
                 </p>
-                <p>11.95€</p>
+                <p id="prezzo_2">11.95€</p>
                 <a
                   href="https://itsapresent.nl/collections/spellen/products/spel-cat-iq-test-gift-republic"
                   target="_blank"
@@ -172,7 +182,7 @@
                   Peru' e sono fatti a mano, con 100% di vera lana di alpaca.
                   Estremamente morbidi ed ipoallergenici!
                 </p>
-                <p>39,99€</p>
+                <p id="prezzo_3">39,99€</p>
                 <a
                   href="https://itsapresent.nl/collections/cadeaus-onder-de-30/products/knuffel-baby-alpaca-inkari"
                   target="_blank"
@@ -194,7 +204,7 @@
                   e metilo alla luce del sole. Osserva la sua pelliccia crescere
                   "lentamente". Carino e funzionale, win win!
                 </p>
-                <p>23,95€</p>
+                <p id="prezzo_4">23,95€</p>
                 <a
                   href="https://itsapresent.nl/collections/cadeaus-onder-de-30/products/growing-planter-luiaard-gift-republic"
                   target="_blank"
@@ -206,7 +216,7 @@
           </tbody>
         </table>
       </div>
-
+      <button onclick="changeColor()">Cambia colore prezzi</button>
       <button onclick="cambiaFormaLink()">
         Dai un'occhiata piu' da vicino ai nostri prodotti
       </button>

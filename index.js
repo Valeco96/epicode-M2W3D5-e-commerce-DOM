@@ -21,11 +21,25 @@ function cambiaTitolo() {
   heading.textContent = "🎁 Silly gifts for silly people 🎁";
 }
 
+function cambiaTitolo2() {
+  let heading = document.querySelector("h1");
+  heading.textContent = "It's a present!";
+  console.log(heading);
+}
+
 // ESERCIZIO 8: Scrivi una funzione per cambiare il colore di background della pagina
 
 function cambiaTema() {
   let body = document.querySelector("body");
-  body.classList.add("ligther");
+  // body.classList.add("ligther");
+  let newBody = body.classList.contains("ligther");
+
+  if (newBody === false) {
+    body.classList.add("ligther");
+  } else {
+    body.classList.remove("ligther");
+  }
+  console.log(newBody);
 }
 
 // ESERCIZIO 9: Scrivi una funzione per cambiare l'indirizzo presente nel futuro in un altro, fittizio
@@ -55,15 +69,37 @@ function cambiaFormaLink() {
 
 // ESERCIZIO 11: Scrivi una funzione per aggiungere/togliere una classe CSS a tutte le immagini della tabella; questa classe deve modificare la visibilità/invisibilità dell'immagine
 
-function mostraImmagini() {
-  let pictures = document.querySelectorAll("div .image-container");
+function mostraImmagini(indice) {
+  let pictures = document.getElementById("nome_" + indice);
   //console.log(pictures);
-
-  for (let picture of pictures) {
-    picture.classList.toggle("no-img-display");
+  let pics = pictures.classList.contains("no-img-display");
+  console.log(pics);
+  if (pics === false) {
+    pictures.classList.add("no-img-display");
+  } else {
+    pictures.classList.remove("no-img-display");
   }
 }
 
 // ESERCIZIO 12: Scrivi una funzione per cambiare il colore del prezzo di ogni prodotto in uno differente, ogni volta che viene invocata
 
+function changeColor() {
+  let prezzi = document.getElementById("prezzo_0");
+  prezzi.style.color =
+    "rgb(" + randomNumber() + "," + randomNumber() + "," + randomNumber() + ")";
+  console.log(prezzi);
+  prezzi.style.color = "rgb (" + randomTotalNumber() + ")";
+}
 
+function randomTotalNumber() {
+  let x0 = Math.random() * 255 + 1;
+  let x1 = Math.random() * 255 + 1;
+  let x2 = Math.random() * 255 + 1;
+  let numeroTotale = `${x0}, ${x1}, ${x2}`;
+  return numeroTotale;
+}
+
+function randomNumber() {
+  let x = Math.random() * 255 + 1;
+  return x;
+}
