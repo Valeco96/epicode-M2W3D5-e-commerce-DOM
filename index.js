@@ -32,21 +32,38 @@ function cambiaTema() {
 
 function cambiaIndirizzo() {
   let address = document.getElementById("indirizzo");
+  //console.log(address);
   address.innerHTML = "Amsterdamsestraatweg 55B, 3512TB, Utrecht";
 }
 
 // ESERCIZIO 10: Scrivi una funzione per aggiungere una classe CSS ad ogni link Amazon della tabella
 
-function cambiaColoreLink() {
-  let linkColor = document.getElementsByClassName("link");
-  linkColor.classList.add("link-color");
+/*function cambiaFormaLink() {
+  let linkShape = document.getElementsByClassName("link");
+  linkShape.classList.add("link-shape");
+  console.log(linkShape);
+}*/
+
+function cambiaFormaLink() {
+  let linkShape = document.getElementsByClassName("link");
+  //console.log(linkShape);
+
+  for (let link of linkShape) {
+    link.classList.add("link-shape");
+  }
 }
 
 // ESERCIZIO 11: Scrivi una funzione per aggiungere/togliere una classe CSS a tutte le immagini della tabella; questa classe deve modificare la visibilità/invisibilità dell'immagine
 
 function mostraImmagini() {
-  let pictures = document.querySelector("img");
-  pictures.classList.remove("no-img-display");
+  let pictures = document.querySelectorAll("div .image-container");
+  //console.log(pictures);
+
+  for (let picture of pictures) {
+    picture.classList.toggle("no-img-display");
+  }
 }
 
 // ESERCIZIO 12: Scrivi una funzione per cambiare il colore del prezzo di ogni prodotto in uno differente, ogni volta che viene invocata
+
+

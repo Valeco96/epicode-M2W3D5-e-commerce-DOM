@@ -11,43 +11,85 @@
         background: #fde68e;
       }
 
-      .link-color {
-        background-color: blueviolet;
-        text-decoration: none;
+      table {
+        border: 1px solid #ffb02e;
       }
 
-      img {
+      thead {
+        background-color: #ffb02e;
+      }
+
+      .link-shape {
+        width: 100%;
+        padding: 10px;
+        background-color: rgb(152, 62, 62);
+        color: #ffb02e;
+        text-decoration: none;
+        box-sizing: border-box;
+        border-radius: 10px;
+      }
+
+      .image-container img {
+        display: block;
+        margin: auto;
+        width: 300px;
+        height: 300px;
+        border-radius: 8px;
+      }
+
+      .no-img-display {
         display: none;
+      }
+
+      #top-btn {
+        margin: 20px;
+      }
+
+      button {
+        margin: 20px 5px;
+      }
+
+      .price-color {
+        color: red;
       }
     </style>
   </head>
+
   <body>
     <header>
-      <button onclick="cambiaTema(), cambiaColoreLink()">Cambia tema</button>
+      <button onclick="cambiaTema()" id="top-btn">Cambia tema</button>
       <h1 onmouseover="cambiaTitolo()">🎁 It's a present! 🎁</h1>
     </header>
 
     <main>
       <div id="table-container">
         <table>
-          <thead style="background-color: #ffb02e">
-            <tr onmouseover="mostraImmagini()">
-              <th>Positive Potato</th>
-              <th>Vaso per piante Ice Cream</th>
-              <th>Cat IQ Test</th>
-              <th>Alpaca Plushie</th>
-              <th>Bradipo Fioriera</th>
+          <thead>
+            <tr>
+              <th>
+                <a href="#" onclick="mostraImmagini()">Positive Potato</a>
+              </th>
+              <th>
+                <a href="#" onclick="mostraImmagini()"
+                  >Vaso per piante Ice Cream</a
+                >
+              </th>
+              <th><a href="#" onclick="mostraImmagini()">Cat IQ Test</a></th>
+              <th>
+                <a href="#" onclick="mostraImmagini()">Alpaca Plushie</a>
+              </th>
+              <th>
+                <a href="#" onclick="mostraImmagini()">Bradipo Fioriera</a>
+              </th>
             </tr>
           </thead>
           <tbody>
             <tr>
               <td>
-                <img
-                  src="images/positive-potato.png"
-                  alt="Plushie-image"
-                  width="300px"
-                  class="no-img-display"
-                />
+                <div class="image-container no-img-display">
+                  <img src="images/positive-potato.png" alt="Plushie-image" />
+                </div>
+
                 <ul>
                   <li>Giocattolino con un profondo messaggio</li>
                   <li>Perfetto per diffondere un po' di felicita'</li>
@@ -57,22 +99,19 @@
                   energia positiva! Con il suo messaggio incoraggiante e' il
                   regalo perfetto per diffondere un po' di felicita'.
                 </p>
-                <p>5,95EUR</p>
+                <p>5,95€</p>
                 <a
                   href="https://itsapresent.nl/collections/top-20/products/postive-potato-brown"
                   target="_blank"
                   class="link"
-                  onmouseover="cambiaColoreLink()"
                   >Per info e positivitá clicca qui!</a
                 >
               </td>
               <td>
-                <img
-                  src="images/ice-cream-pot.png"
-                  alt="ice-cream-pot-img"
-                  width="300px"
-                  class="no-img-display"
-                />
+                <div class="image-container no-img-display">
+                  <img src="images/ice-cream-pot.png" alt="ice-cream-pot-img" />
+                </div>
+
                 <ul>
                   <li>
                     Un delizioso vaso per piante a forma di vaschetta gelato
@@ -83,7 +122,7 @@
                   Perfetto per la vostra pianta preferita o come simpatica
                   decorazione. Aggiungete un po' di fascino ai vostri interni!
                 </p>
-                <p>8,95EUR</p>
+                <p>8,95€</p>
                 <a
                   href="https://itsapresent.nl/collections/plantenpotten/products/planter-ice-cream-green-orange"
                   target="_blank"
@@ -92,12 +131,13 @@
                 >
               </td>
               <td>
-                <img
-                  src="images/cat-iq-test.png"
-                  alt="iq-test-cat-game-img"
-                  width="300px"
-                  class="no-img-display"
-                />
+                <div class="image-container no-img-display">
+                  <img
+                    src="images/cat-iq-test.png"
+                    alt="iq-test-cat-game-img"
+                  />
+                </div>
+
                 <ul>
                   <li>
                     100 domande, test e curiosita'per scoprire l'IQ del vostro
@@ -111,7 +151,7 @@
                   intelligenti e fatti bizzarri. Perfetto per saperne di piu'
                   sul tuo amico felino.
                 </p>
-                <p>11.95EUR</p>
+                <p>11.95€</p>
                 <a
                   href="https://itsapresent.nl/collections/spellen/products/spel-cat-iq-test-gift-republic"
                   target="_blank"
@@ -120,12 +160,9 @@
                 >
               </td>
               <td>
-                <img
-                  src="images/alpaca-img.png"
-                  alt="alpaca-plushie-img"
-                  width="350px"
-                  class="no-img-display"
-                />
+                <div class="image-container no-img-display">
+                  <img src="images/alpaca-img.png" alt="alpaca-plushie-img" />
+                </div>
                 <ul>
                   <li>Fatti a mano, qunidi tutti unici!</li>
                   <li>Super carino, super morbido, super resistente~</li>
@@ -135,7 +172,7 @@
                   Peru' e sono fatti a mano, con 100% di vera lana di alpaca.
                   Estremamente morbidi ed ipoallergenici!
                 </p>
-                <p>39,99EUR</p>
+                <p>39,99€</p>
                 <a
                   href="https://itsapresent.nl/collections/cadeaus-onder-de-30/products/knuffel-baby-alpaca-inkari"
                   target="_blank"
@@ -144,12 +181,10 @@
                 >
               </td>
               <td>
-                <img
-                  src="images/fioriera-bradipo.png"
-                  alt="sloth-pot-img"
-                  width="300px"
-                  class="no-img-display"
-                />
+                <div class="image-container no-img-display">
+                  <img src="images/fioriera-bradipo.png" alt="sloth-pot-img" />
+                </div>
+
                 <ul>
                   <li>Adatto a tutti i germogli!</li>
                   <li>Coltivare, tagliare, mangiare, ripetere!</li>
@@ -159,7 +194,7 @@
                   e metilo alla luce del sole. Osserva la sua pelliccia crescere
                   "lentamente". Carino e funzionale, win win!
                 </p>
-                <p>23,95EUR</p>
+                <p>23,95€</p>
                 <a
                   href="https://itsapresent.nl/collections/cadeaus-onder-de-30/products/growing-planter-luiaard-gift-republic"
                   target="_blank"
@@ -171,6 +206,10 @@
           </tbody>
         </table>
       </div>
+
+      <button onclick="cambiaFormaLink()">
+        Dai un'occhiata piu' da vicino ai nostri prodotti
+      </button>
     </main>
 
     <footer>
@@ -186,10 +225,9 @@
           Vieni a visitare
           <a href="https://itsapresent.nl/" target="_blank">It's a Present!</a>
           all'indirizzo
-          <span onmouseover="cambiaIndirizzo()" id="indirizzo"
-            >Lijnmarkt 16, 3511 KH Utrecht</span
-          >~
+          <span id="indirizzo">Lijnmarkt 16, 3511 KH Utrecht</span>
         </p>
+        <button onclick="cambiaIndirizzo()">Indirizzo alternativo</button>
       </div>
     </footer>
   </body>
